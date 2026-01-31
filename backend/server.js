@@ -23,6 +23,6 @@ mongoose.connect(process.env.MONGO_URI)
 app.use('/auth',authRoutes)
 app.use('/notes',notesRoutes)
 
-app.listen(3000,()=>{
-    console.log("Server 3000...")
+app.listen(process.env.PORT,()=>{
+    console.log("Server started...")
 })
